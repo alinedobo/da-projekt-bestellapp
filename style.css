@@ -20,7 +20,6 @@ font-size: 16px;
 main {
     min-height: 80dvh;
     width: 100%;
-    background-color: blanchedalmond;
 
     img{
         height: 100px;
@@ -46,14 +45,9 @@ main {
 #content-wrapper {
     min-height: 60dvh;
     width: 100%;
-    background-color: burlywood;
     display: flex;
-    
-    #menu{
-        width: calc(100% - 300px);
-        height: 100%;
-        border: 1px solid black;
-    }
+
+    /* Menu is styled in menu.css */
 
     /* Cart is styled in cart.css */
 
