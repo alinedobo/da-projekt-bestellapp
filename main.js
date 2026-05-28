@@ -54,6 +54,7 @@ function renderAddedDishes(){
 
 function increaseDishAmount(dishIndex){
     myDishes[dishIndex].inCart ++;
+    renderCart();
 
     const amountDishRef = document.getElementById(`amount-${myDishes[dishIndex].id}`);
     amountDishRef.innerHTML = /*html*/`

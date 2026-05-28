@@ -5,7 +5,7 @@ let dishes = [
         price: 14.9,
         alinesFavourite: false,
         id: "greensalad",
-        inCart: 1,
+        inCart: 0,
     },
     {
         name: "Udon Know Me",
@@ -13,7 +13,7 @@ let dishes = [
         price: 16.9,
         alinesFavourite: false,
         id: "udonknowme",
-        inCart: 1,
+        inCart: 0,
     },
     {
         name: "Summer Luv",
@@ -21,7 +21,7 @@ let dishes = [
         price: 5.9,
         alinesFavourite: false,
         id: "summerluv",
-        inCart: 1,
+        inCart: 0,
     },
     {
         name: "Pretty Chick",
@@ -29,7 +29,7 @@ let dishes = [
         price: 14.9,
         alinesFavourite: true,
         id: "prettychick",
-        inCart: 3,
+        inCart: 0,
     },
     {
         name: "Duckin' Good",

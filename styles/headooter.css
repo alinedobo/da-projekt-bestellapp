@@ -1,24 +1,21 @@
 header {
-    height: 10dvh;
+    height: 80px;
     width: 100%;
     background-color: plum;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 16px;
+    padding: 8px max((calc(100% - 1920px)/2), 64px);
 
     img{
         height: 30px;
     }
-
-    nav{
-
-    }
 }
 
 footer {
-    height: 10dvh;
+    height: 80px;
     width: 100%;
     background-color: plum;
+    padding: 8px max((calc(100% - 1920px)/2), 64px);
 }
 

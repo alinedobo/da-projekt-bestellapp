@@ -20,7 +20,7 @@ function getMenuItem(dishIndex, myDishes) {
             </div>
             <div class="dish-purchasing">
                 <p>${myDishes[dishIndex].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
-                <button class="add-to-cart-button" id=${dishIndex}>Add to cart</button>
+                <button class="add-to-cart-button" id=${dishIndex} onclick="increaseDishAmount(${dishIndex})">Add to cart</button>
             </div>
         </div>
     `;
