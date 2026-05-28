@@ -1,28 +1,53 @@
 const myDishes = dishes;
+const cartRef = document.getElementById("cart");
+const menuItemRef = document.getElementById("menu-items-wrapper");
 
-console.log("1");
 
 function init() {
-    console.log("2");
     renderDishes();
-    console.log("inited");
+    renderCart();
+    console.log("init complete");
 }
 
 
 function renderDishes(dishes) {
-    const menuItemRef = document.getElementById("menu-items-wrapper");
     menuItemRef.innerHTML = "";
 
-    console.log(myDishes.length);
-
     for (let dishIndex = 0; dishIndex < myDishes.length; dishIndex++) {
-        console.log("pre-dish rendering");
         menuItemRef.innerHTML += getMenuItem(dishIndex, myDishes);
-        console.log("dish rendered");
     }
 
-    console.log("all dishes rendered");
+    console.log("all dishes rendered in menu");
 }
 
-console.log(myDishes[1].name);
-console.log(myDishes[1].id);
+
+function renderCart(){
+    cartRef.innerHTML = /*html*/`
+        <h3>Your Basket</h3>
+        <div id="meals-container">
+        </div>
+    `
+    console.log("cart rendered");
+
+    renderAddedDishes();
+}
+
+
+function renderAddedDishes(){
+    const mealsContainerRef = document.getElementById("meals-container");
+
+    mealsContainerRef.innerHTML = "";
+
+    for (let i = 0; i < myDishes.length; i++){
+        if (myDishes[i].inCart != 0){
+        mealsContainerRef.innerHTML += /*html*/`
+        <div>
+            <p>${myDishes[i].inCart} x ${myDishes[i].name}</p>
+        </div>
+        `
+        }
+    }
+
+    console.log("all dishes added to cart");
+}
+

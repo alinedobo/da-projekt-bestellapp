@@ -10,7 +10,7 @@ function getMenuItem(dishIndex) {
             </div>
             <div class="dish-purchasing">
                 <p>${myDishes[dishIndex].price}</p>
-                <button>Add to cart</button>
+                <button class="add-to-basket-button" id=${dishIndex}>Add to cart</button>
             </div>
         </div>
     `;

@@ -14,12 +14,12 @@
         .menu-item {
             background-color: blanchedalmond;
             width: 100%;
-            height: 125px;
+            height: 175px;
             display: flex;
             gap: 8px;
-            padding: 8px 16px;
+            padding: 16px 16px;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             gap: 16px;
             border-radius: 8px;
     
@@ -32,7 +32,9 @@
                 gap: 16px;
     
                 img {
-                    height: calc(125px - 2*8px);
+                    height: calc(175px - 2*16px);
+                    width: calc(175px - 2*16px);
+                    object-fit: cover;
                     border-radius: 8px;
                 }
             }

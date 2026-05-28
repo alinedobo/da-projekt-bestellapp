@@ -5,7 +5,15 @@
 
     #cart {
         width: 100%;
-        height: 400px;
+        height: 600px;
         background-color: antiquewhite;
+
+#meals-container{
+    height: 250px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+
     }
 }
