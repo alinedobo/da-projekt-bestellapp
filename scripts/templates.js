@@ -1,4 +1,4 @@
-function getMenuItem(dishIndex) {
+function getMenuItem(dishIndex, myDishes) {
     return /*html*/ `
         <div class="menu-item">
             <div class="dish-details">
@@ -16,3 +16,24 @@ function getMenuItem(dishIndex) {
     `;
 }
 
+
+function getDishesInCart(dishIndex, myDishes){
+    return /*html*/`
+        <div class="dish-in-cart-card" id="${myDishes[dishIndex].id}-in-cart">
+            <div class="meal-in-cart-card-first-row">
+                <p>${myDishes[dishIndex].name}</p>
+                <button onclick="removeDishFromCart(${dishIndex})">&#128465;</button>
+            </div>
+            <div class="meal-in-cart-card-second-row">
+                <div class="change-meal-amount">
+                    <button onclick="decreaseDishAmount(${dishIndex})">&minus;</button>
+                    <p id="amount-${myDishes[dishIndex].id}">${myDishes[dishIndex].inCart}</p>
+                    <button onclick="increaseDishAmount(${dishIndex})">&plus;</button>
+                </div>
+                <div class="meal-in-cart-price">
+                    <p id="sum-${myDishes[dishIndex].id}">${(myDishes[dishIndex].price * myDishes[dishIndex].inCart).toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+                </div>
+            </div>
+        </div>
+        `
+}

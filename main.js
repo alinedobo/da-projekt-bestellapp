@@ -38,29 +38,46 @@ function renderAddedDishes(){
 
     mealsContainerRef.innerHTML = "";
 
-    for (let i = 0; i < myDishes.length; i++){
-        if (myDishes[i].inCart != 0){
-        mealsContainerRef.innerHTML += /*html*/`
-        <div class="dish-in-cart-card">
-            <div class="meal-in-cart-card-second-row">
-                <p>${myDishes[i].inCart} x ${myDishes[i].name}</p>
-            </div>
-            <div class="meal-in-cart-card-second-row">
-                <div class="change-meal-amount">
-                    <button>&#128465;</button>
-                    <button>&minus;</button>
-                    <p>${myDishes[i].inCart}</p>
-                    <button>&plus;</button>
-                </div>
-                <div class="meal-in-cart-price">
-                    <p>${myDishes[i].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
-                </div>
-            </div>
-        </div>
-        `
+    for (let dishIndex = 0; dishIndex < myDishes.length; dishIndex++){
+        if (myDishes[dishIndex].inCart != 0){
+        mealsContainerRef.innerHTML += getDishesInCart(dishIndex, myDishes);
         }
     }
 
     console.log("all dishes added to cart");
 }
 
+
+function increaseDishAmount(dishIndex){
+    myDishes[dishIndex].inCart ++;
+
+    const amountDishRef = document.getElementById(`amount-${myDishes[dishIndex].id}`);
+    amountDishRef.innerHTML = /*html*/`
+        <p id="amount-${myDishes[dishIndex].id}">${myDishes[dishIndex].inCart}</p>
+    `
+    const sumDishRef = document.getElementById(`sum-${myDishes[dishIndex].id}`);
+    sumDishRef.innerHTML = /*html*/`
+        <p id="sum-${myDishes[dishIndex].id}">${(myDishes[dishIndex].price * myDishes[dishIndex].inCart).toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+    `
+    renderCart();
+}
+
+function decreaseDishAmount(dishIndex){
+    myDishes[dishIndex].inCart --;
+
+    const amountDishRef = document.getElementById(`amount-${myDishes[dishIndex].id}`);
+    amountDishRef.innerHTML = /*html*/`
+        <p id="amount-${myDishes[dishIndex].id}">${myDishes[dishIndex].inCart}</p>
+    `
+    const sumDishRef = document.getElementById(`sum-${myDishes[dishIndex].id}`);
+    sumDishRef.innerHTML = /*html*/`
+        <p id="sum-${myDishes[dishIndex].id}">${(myDishes[dishIndex].price * myDishes[dishIndex].inCart).toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+    `
+    renderCart();
+}
+
+
+function removeDishFromCart(dishIndex){
+    myDishes[dishIndex].inCart = 0;
+    renderCart();
+}

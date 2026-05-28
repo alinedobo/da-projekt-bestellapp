@@ -29,7 +29,7 @@ let dishes = [
         price: 14.9,
         alinesFavourite: true,
         id: "prettychick",
-        inCart: 2,
+        inCart: 3,
     },
     {
         name: "Duckin' Good",
@@ -37,6 +37,14 @@ let dishes = [
         price: 16.5,
         alinesFavourite: false,
         id: "duckingood",
+        inCart: 0,
+    },
+    {
+        name: "Sesamì",
+        description: "Hot udon noodles in a creamy sesame and chilli sauce, served with breaded soy chicken, cucumber, carrots, spring onions, peanuts and coriander",
+        price: 14.90,
+        alinesFavourite: false,
+        id: "sesami",
         inCart: 0,
     },
 ];
