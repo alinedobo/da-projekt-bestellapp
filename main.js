@@ -43,7 +43,6 @@ function renderAddedDishes(){
         mealsContainerRef.innerHTML += getDishesInCart(dishIndex, myDishes);
         }
     }
-
     console.log("all dishes added to cart");
 }
 
@@ -80,4 +79,16 @@ function decreaseDishAmount(dishIndex){
 function removeDishFromCart(dishIndex){
     myDishes[dishIndex].inCart = 0;
     renderCart();
+}
+
+
+function renderCheckoutSum(){
+    let sumAllDishes = 0;
+    for(let dishIndex = 0; dishIndex < myDishes.length; dishIndex++){
+        sumAllDishes += (myDishes[dishIndex].price * myDishes[dishIndex].inCart);
+    }
+    sumAllDishes = sumAllDishes.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+    return sumAllDishes;
+
+    
 }
