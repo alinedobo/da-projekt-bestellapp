@@ -22,14 +22,11 @@ function renderDishes(dishes) {
 
 
 function renderCart(){
-    cartRef.innerHTML = /*html*/`
-        <h3>Your Basket</h3>
-        <div id="meals-container">
-        </div>
-    `
+    cartRef.innerHTML = getCart();
     console.log("cart rendered");
 
     renderAddedDishes();
+    renderCheckout();
 }
 
 
@@ -82,13 +79,15 @@ function removeDishFromCart(dishIndex){
 }
 
 
-function renderCheckoutSum(){
+function renderCheckout(){
     let sumAllDishes = 0;
     for(let dishIndex = 0; dishIndex < myDishes.length; dishIndex++){
         sumAllDishes += (myDishes[dishIndex].price * myDishes[dishIndex].inCart);
     }
-    sumAllDishes = sumAllDishes.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
-    return sumAllDishes;
+    sumAllDishes = sumAllDishes;
 
-    
+    const sumTotal = sumAllDishes + 4.99;
+
+    const sumTotalRef = document.getElementById("check-out-container");
+    sumTotalRef.innerHTML = getCheckout(sumAllDishes, sumTotal);
 }

@@ -1,3 +1,13 @@
+function getCart(){
+    return /*html*/`
+        <h3>Your Basket</h3>
+        <div id="meals-container"></div>
+        <div id="check-out-container">
+        </div>
+        `
+}
+
+
 function getMenuItem(dishIndex, myDishes) {
     return /*html*/ `
         <div class="menu-item">
@@ -36,4 +46,25 @@ function getDishesInCart(dishIndex, myDishes){
             </div>
         </div>
         `
+}
+
+
+function getCheckout(sumAllDishes, sumTotal){
+    return /*html*/`
+        <table>
+            <tr>
+                <td class="left-align">Subtotal</td>
+                <td class="right-align">${sumAllDishes.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</td>
+            </tr>
+            <tr>
+                <td class="left-align">Delivery fee</td>
+                <td class="right-align">4,99 €</td>
+            </tr>
+            <tr>
+                <th class="left-align">Total</th>
+                <th class="right-align">${sumTotal.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</th>
+            </tr>
+        </table>
+        <button>Order now (${sumTotal.toLocaleString("de-DE", { style: "currency", currency: "EUR" })})</button>
+    `
 }
