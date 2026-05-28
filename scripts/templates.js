@@ -26,6 +26,11 @@ function getMenuItem(dishIndex, myDishes) {
     `;
 }
 
+function getEmptyCart(){
+    return /*html*/`
+        <p>Please select your order.</p>
+    `
+}
 
 function getDishesInCart(dishIndex, myDishes){
     return /*html*/`
@@ -49,7 +54,7 @@ function getDishesInCart(dishIndex, myDishes){
 }
 
 
-function getCheckout(sumAllDishes, sumTotal){
+function getCheckout(sumAllDishes, sumTotal, deliverFee){
     return /*html*/`
         <table>
             <tr>
@@ -58,7 +63,7 @@ function getCheckout(sumAllDishes, sumTotal){
             </tr>
             <tr>
                 <td class="left-align">Delivery fee</td>
-                <td class="right-align">4,99 €</td>
+                <td class="right-align">${deliverFee.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</td>
             </tr>
             <tr>
                 <th class="left-align">Total</th>

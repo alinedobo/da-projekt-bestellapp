@@ -32,12 +32,20 @@ function renderCart(){
 
 function renderAddedDishes(){
     const mealsContainerRef = document.getElementById("meals-container");
-
     mealsContainerRef.innerHTML = "";
 
-    for (let dishIndex = 0; dishIndex < myDishes.length; dishIndex++){
-        if (myDishes[dishIndex].inCart != 0){
-        mealsContainerRef.innerHTML += getDishesInCart(dishIndex, myDishes);
+    let dishesInCart = 0;
+    for(let i = 0; i < myDishes.length; i++){
+        dishesInCart += myDishes[i].inCart;
+    }
+
+    if(dishesInCart === 0){
+        mealsContainerRef.innerHTML = getEmptyCart();
+    } else{
+        for (let dishIndex = 0; dishIndex < myDishes.length; dishIndex++){
+            if (myDishes[dishIndex].inCart != 0){
+            mealsContainerRef.innerHTML += getDishesInCart(dishIndex, myDishes);
+            }
         }
     }
     console.log("all dishes added to cart");
@@ -80,14 +88,21 @@ function removeDishFromCart(dishIndex){
 
 
 function renderCheckout(){
+    const sumTotalRef = document.getElementById("check-out-container");
     let sumAllDishes = 0;
     for(let dishIndex = 0; dishIndex < myDishes.length; dishIndex++){
         sumAllDishes += (myDishes[dishIndex].price * myDishes[dishIndex].inCart);
     }
     sumAllDishes = sumAllDishes;
 
-    const sumTotal = sumAllDishes + 4.99;
+    let deliverFee = 4.99;
 
-    const sumTotalRef = document.getElementById("check-out-container");
-    sumTotalRef.innerHTML = getCheckout(sumAllDishes, sumTotal);
+    if(sumAllDishes === 0){
+        sumTotal = 0;
+        deliverFee = 0;
+        sumTotalRef.innerHTML = getCheckout(sumAllDishes, sumTotal, deliverFee);
+    } else{
+        const sumTotal = sumAllDishes + deliverFee;
+        sumTotalRef.innerHTML = getCheckout(sumAllDishes, sumTotal, deliverFee);
+    } 
 }
