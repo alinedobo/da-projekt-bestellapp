@@ -13,7 +13,7 @@ let dishes = [
         price: 16.9,
         alinesFavourite: false,
         id: "udonknowme",
-        inCart: 0,
+        inCart: 1,
     },
     {
         name: "Summer Luv",
@@ -21,7 +21,7 @@ let dishes = [
         price: 5.9,
         alinesFavourite: false,
         id: "summerluv",
-        inCart: 0,
+        inCart: 1,
     },
     {
         name: "Pretty Chick",

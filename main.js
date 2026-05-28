@@ -41,8 +41,21 @@ function renderAddedDishes(){
     for (let i = 0; i < myDishes.length; i++){
         if (myDishes[i].inCart != 0){
         mealsContainerRef.innerHTML += /*html*/`
-        <div>
-            <p>${myDishes[i].inCart} x ${myDishes[i].name}</p>
+        <div class="dish-in-cart-card">
+            <div class="meal-in-cart-card-second-row">
+                <p>${myDishes[i].inCart} x ${myDishes[i].name}</p>
+            </div>
+            <div class="meal-in-cart-card-second-row">
+                <div class="change-meal-amount">
+                    <button>&#128465;</button>
+                    <button>&minus;</button>
+                    <p>${myDishes[i].inCart}</p>
+                    <button>&plus;</button>
+                </div>
+                <div class="meal-in-cart-price">
+                    <p>${myDishes[i].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+                </div>
+            </div>
         </div>
         `
         }

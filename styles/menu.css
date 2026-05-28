@@ -3,13 +3,16 @@
     height: 100%;
     border: 1px solid black;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
     #menu-items-wrapper{
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 8px;
 
         .menu-item {
             background-color: blanchedalmond;
@@ -30,6 +33,12 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 16px;
+
+                .dish-name-description{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                }
     
                 img {
                     height: calc(175px - 2*16px);
@@ -39,6 +48,7 @@
                 }
             }
     
+
             .dish-purchasing {
                 height: 100%;
                 width: 20%;
@@ -46,6 +56,20 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-end;
+
+                p{
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+
+                .add-to-cart-button{
+                    border: 1px solid black;
+                    border-radius: 4px;
+                    padding: 2px 8px;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
             }
         }
     }
