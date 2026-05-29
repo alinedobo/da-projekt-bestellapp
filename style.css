@@ -1,3 +1,7 @@
+:root {
+  --dark-green: rgb(7, 79, 7); /* global scope */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,98 +17,118 @@
     border: initial;
     line-height: 1;
 
-    button:hover{
+    button:hover {
         cursor: pointer;
     }
 }
 
-
 html {
-font-size: 16px;
-font-family: Palanquin;
-line-height: 1;
+    font-size: 16px;
+    font-family: Palanquin;
+    line-height: 1;
 
-h1{
-    font-size: 2.5rem;
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
 }
 
-h2{
-    font-size: 2rem;
-}
-
-h3{
-    font-size: 1.5rem;
-}
-
-h4{
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
+section {
+    display: flex;
+    justify-content: center;
 }
 
 main {
-    min-height: 80dvh;
     width: 100%;
+    /* background: orange; */
+}
+
+.content {
+    width: 100%;
+    max-width: 1440px;
+    /* background: black; */
 }
 
 #landing-section {
-    height: fit-content;
-    width: 100%;
-    background-color: aqua;
-    display: flex;
+    height: 40dvh;
+    max-height: 500px;
+    /* background: rgb(7, 79, 7); */
+    background: url(./assets/images/vegang-vegan-meal.png);
     flex-direction: column;
+    display: flex;
+    justify-content: center;
 
-img{
+    #background-image {
         width: 100%;
         max-height: 300px;
         object-fit: cover;
     }
-    
-    #restaurant-info{
-        height: 150px;
+
+    #logo {
+        height: 100px;
+        width: auto;
+        position: absolute;
+        bottom: 35%;
+        left: 45%;
+        z-index: 1;
+    }
+
+    #restaurant-info {
+        height: 20dvh;
+        max-height: 200px;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         gap: 16px;
-        background-color: azure;
+        padding-bottom: 24px;
+        background: var(--dark-green);
+        color: white;
+        position: absolute;
+        bottom: 0;
 
-        #restaurant-name-rating{
+        #restaurant-name-rating {
             display: flex;
             gap: 24px;
             align-items: flex-end;
             font-size: 20px;
 
-            #ratings{
+            #ratings {
                 padding-bottom: 4px;
                 display: flex;
                 gap: 4px;
 
-                #rating-average{
+                #rating-average {
                     font-weight: 600;
                 }
 
-                #total-ratings{
+                #total-ratings {
                     color: darkgrey;
                 }
             }
-
         }
     }
-
 }
 
 #content-wrapper {
-    min-height: 60dvh;
+    height: 100%;
     width: 100%;
     display: flex;
-    padding: 0px max((calc(100% - 1440px)/2), 64px);
 
     /* Menu is styled in menu.css */
 
     /* Cart is styled in cart.css */
-
 }
-

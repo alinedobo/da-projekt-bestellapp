@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    position: relative;
+    list-style: none;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    background: initial;
+    border: initial;
+}
+
+.lime{
+    background: lime;
+}
+
+.teal{
+    background: teal;
+}
+
+.green{
+    background: green;
+}
+
+.purple{
+    background: purple;
+}
+
+
+main{
+    width: 100%;
+}
+
+
+section{
+    width: 100%;
+    height: auto;
+
+    .balken{
+        height: 100px;
+        width: 100%;
+        background: orange;
+        position: absolute;
+        top: 0;
+    }
+
+    article{
+        width: 60%;
+        height: auto;
+        background: orange;
+    }
+
+    .menu-card{
+        width: 600px;
+        height: 400px;
+        background: red;
+        border: 1px white solid;
+    }
+}
+
+section, header, footer, aside{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    /* background: black; */
+    border: 2px white solid;
+}
+
+header{
+    height: 8dvh;
+    width: 100%;
+}
+
+
+
+
+
+aside{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 8dvh;
+
+    .content{
+        display: flex;
+        justify-content: flex-end;
+
+        #cart{
+            background: white;
+            height: 600px;
+            width: 20%;
+            position: sticky;
+            top: 0;
+            border: 1px black solid;
+        }
+    }
+
+
+}

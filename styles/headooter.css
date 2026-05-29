@@ -1,21 +1,30 @@
-header {
-    height: 80px;
+header, footer {
+    height: 8dvh;
+    max-height: 80px;
     width: 100%;
-    background-color: plum;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px max((calc(100% - 1920px)/2), 64px);
+    justify-content: center;
+    background: var(--dark-green);
 
-    img{
+    img {
         height: 30px;
     }
 }
 
-footer {
-    height: 80px;
+.content-headooter {
     width: 100%;
-    background-color: plum;
-    padding: 8px max((calc(100% - 1920px)/2), 64px);
+    height: 100%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
 }
 
+#header-content{
+    justify-content: space-between;
+}
+
+#footer-links{
+    justify-content: space-evenly;
+    color: white;
+}

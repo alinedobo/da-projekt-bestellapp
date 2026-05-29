@@ -18,7 +18,8 @@
         .menu-item {
             background-color: blanchedalmond;
             width: 100%;
-            height: 175px;
+            /* height: 175px; */
+            height: 300px;
             display: flex;
             gap: 8px;
             padding: 16px 16px;

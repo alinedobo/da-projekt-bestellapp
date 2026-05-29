@@ -16,16 +16,16 @@ Bestellapp:
 FIGMA:
 - The menu bar remains permanently visible, giving the user constant access to the basket. Be sure to review this frame in prototype mode.
 - After the user clicks “Buy now,” a confirmation message appears indicating the order was successful, and the basket disappears. The message automatically fades out after a delay, and the user can also close it manually using the close icon.
-- Header & Footer are the full width of the frame.  In this case  - 1920px.
-- The rest of the content stays centered with the frame size  - 1440px
-- The menu bar doesn’t have any functionality - it’s just a placeholder.
+// Header & Footer are the full width of the frame.  In this case  - 1920px.
+// The rest of the content stays centered with the frame size  - 1440px
+// The menu bar doesn’t have any functionality - it’s just a placeholder.
 
 
 CHECKLIST:
 *** Git-Workflow für dein Projekt
 Nutze GitHub von Anfang an. Denk dran: Dein GitHub-Profil ist deine Visitenkarte für Arbeitgeber – nutze diese Chance!
-Committe nach jeder Coding-Session
-Verwende klare, aussagekräftige Commit-Messages
+// Committe nach jeder Coding-Session
+// Verwende klare, aussagekräftige Commit-Messages
 Verwende .gitignore, um unnötige Dateien auszuschließen
 Halte dein Repository aktuell und gepflegt
 
@@ -35,18 +35,18 @@ Die Struktur des Wireframes ist eingehalten.
 Pixelgenaue Umsetzung ist nicht erforderlich. Abweichungen vom Design sind erlaubt, solange das Wireframe eingehalten wird.
 
 ***Funktionalitäten
-Es gibt einen Warenkorb/ Bild + Logo & Name von einem Restaurant / sowie eine Gerichteliste (grundsätzlich schickes design, angelehnt an Lieferando) 
-Es gibt einen Header und einen Footer
+// Es gibt einen Warenkorb/ Bild + Logo & Name von einem Restaurant / sowie eine Gerichteliste (grundsätzlich schickes design, angelehnt an Lieferando) 
+// Es gibt einen Header und einen Footer
 Es wird ein großes Bild z.B. vom Essen des Restaurants ganz oben angezeigt. Das Logo liegt halb über diesem Bild. (s. z.B. Lieferando)
-Restaurant Name, Bewertung, Beschreibung und Informationen zum Lieferpreis etc. sowie Sterne werden statisch angezeigt.
-Die auszuwählenden Gerichte (mindestens 5 Stück) werden dynamisch über JS aus einem Objekt gerendert.
-Es gibt einen Gerichteslider, der zu den jeweiligen Sektionen verlinkt, es sollte mindestens 3 verschiedene Kategorien geben mit jeweils mindestens 3 Gerichten, diese sollten von Bildern zur jeweiligen Kategorie getrennt sein. (optional)
-Man soll Gerichte in den Warenkorb hinzufügen können, indem man auf das Plus beim jeweiligen Gericht drückt.
-Im Warenkorb kann man nun für jedes einzelne enthaltene Gericht die Mengen erhöhen oder verringern sowie einzelne Gerichte komplett aus dem Warenkorb löschen.
-Im Warenkorb wird die Gesamtsumme angezeigt
-ggf. mit Zwischensumme zwecks Lieferkosten etc. (optional)
+// Restaurant Name, Bewertung, Beschreibung und Informationen zum Lieferpreis etc. sowie Sterne werden statisch angezeigt.
+// Die auszuwählenden Gerichte (mindestens 5 Stück) werden dynamisch über JS aus einem Objekt gerendert.
+(optional) Es gibt einen Gerichteslider, der zu den jeweiligen Sektionen verlinkt, es sollte mindestens 3 verschiedene Kategorien geben mit jeweils mindestens 3 Gerichten, diese sollten von Bildern zur jeweiligen Kategorie getrennt sein. 
+// Man soll Gerichte in den Warenkorb hinzufügen können, indem man auf das Plus beim jeweiligen Gericht drückt.
+// Im Warenkorb kann man nun für jedes einzelne enthaltene Gericht die Mengen erhöhen oder verringern sowie einzelne Gerichte komplett aus dem Warenkorb löschen.
+// Im Warenkorb wird die Gesamtsumme angezeigt
+// (optional) ggf. mit Zwischensumme zwecks Lieferkosten etc. 
 Man kann auf den bestellen Button drücken, danach sollte der Warenkorb geleert werden und eine Meldung kommen, dass man eine Testbestellung vorgenommen hat (kein Alert!).
-Wenn viele Gerichte im Warenkorb sind, sollte nichts aus dem Container herauslaufen.
+// Wenn viele Gerichte im Warenkorb sind, sollte nichts aus dem Container herauslaufen.
 Der Desktop-Warenkorb sollte immer oben an der Seite angeheftet sein, außer man ist ganz oben oder unten auf der Seite. (sticky)
 
 *** Code
@@ -61,8 +61,8 @@ Lagere HTML Templates aus in extra-Funktionen
 Bis 320px Breite alles responsive ohne horizontalen Scrollbalken
 Der Warenkorb ist jetzt rechts seitlich ausgeblendet, nun wird z.B. unten in der Mitte ein Button angezeigt, der den Responsive Warenkorb als Dialog öffnen kann und ggf. den Gesamtwert der Bestellung anzeigt.
 Im Responsive Warenkorb kann man wie im Desktop Warenkorb auch die Mengen der Gerichte erhöhen oder verringern sowie einzelne Gerichte komplett aus dem Warenkorb löschen und bestellen.
-Der Content ist für hohe Auflösungen auf 1920px oder 1440px begrenzt
+// Der Content ist für hohe Auflösungen auf 1920px oder 1440px begrenzt
 
 *** Sonstiges
-Favicon vorhanden
-Die Hauptseite muss index.html heißen, damit sie standardmäßig geladen wird.
+// Favicon vorhanden
+// Die Hauptseite muss index.html heißen, damit sie standardmäßig geladen wird.
