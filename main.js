@@ -67,6 +67,7 @@ function increaseDishAmount(dishIndex){
     renderCart();
 }
 
+
 function decreaseDishAmount(dishIndex){
     myDishes[dishIndex].inCart --;
 
@@ -106,4 +107,21 @@ function renderCheckout(){
         const sumTotal = sumAllDishes + deliverFee;
         sumTotalRef.innerHTML = getCheckout(sumAllDishes, sumTotal, deliverFee);
     } 
+}
+
+
+const orderConfirmationDialogRef = document.getElementById("order-confirmation-popup")
+
+function confirmOrder(){
+    orderConfirmationDialogRef.showModal();
+
+    orderConfirmationDialogRef.innerHTML = /*html*/`
+        <div>
+            <button onclick="closeOrderConfirmationDialog()">close me</button>
+        </div>
+    `
+}
+
+function closeOrderConfirmationDialog(){
+    orderConfirmationDialogRef.close();
 }

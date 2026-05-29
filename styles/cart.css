@@ -114,3 +114,11 @@
         }
     }
 }
+
+#order-confirmation-popup{
+    height: 500px;
+    width: 350px;
+    margin: auto;
+    background: plum;
+    z-index: 1;
+}
