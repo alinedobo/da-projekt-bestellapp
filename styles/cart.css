@@ -4,6 +4,8 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
+    right: 0;
 
     #cart {
         width: 100%;

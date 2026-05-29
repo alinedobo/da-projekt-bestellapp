@@ -1,8 +1,9 @@
 #menu {
     background-color: white;
-    width: calc(100% - 300px);
+    width: calc(100% - 350px);
+    max-width: 1090px;
     height: 100%;
-    border: 1px solid black;
+    border: 2px solid purple;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -17,9 +18,10 @@
 
         .menu-item {
             background-color: blanchedalmond;
-            width: 100%;
-            /* height: 175px; */
-            height: 300px;
+            width: auto;
+            min-width: 500px;
+            max-width: 800px;
+            height: 175px;
             display: flex;
             gap: 8px;
             padding: 16px 16px;
@@ -53,7 +55,7 @@
 
             .dish-purchasing {
                 height: 100%;
-                width: 20%;
+                width: fit-content;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -67,7 +69,7 @@
                 .add-to-cart-button{
                     border: 1px solid black;
                     border-radius: 4px;
-                    padding: 2px 8px;
+                    padding: 4px 8px;
                     text-align: center;
                     vertical-align: middle;
                     line-height: 1;
