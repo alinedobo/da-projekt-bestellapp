@@ -6,6 +6,10 @@
     position: absolute;
     right: 0;
 
+    @media screen and (max-width: 890px) {
+        display: none;
+    }
+
     #cart {
         width: 100%;
         height: 500px;
@@ -91,7 +95,8 @@
                 width: 80%;
                 border-collapse: collapse;
 
-                th, td {
+                th,
+                td {
                     padding: 4px;
                 }
 
@@ -106,7 +111,7 @@
                 }
             }
 
-            button{
+            button {
                 border: 2px solid white;
                 padding: 4px 16px;
                 border-radius: 16px;
@@ -116,7 +121,7 @@
     }
 }
 
-#order-confirmation-popup{
+#order-confirmation-popup {
     height: 150px;
     width: 200px;
     margin: auto;
@@ -127,7 +132,7 @@
     border-radius: 8px;
     background: var(--dark-green);
 
-    #confirmation-popup-content{
+    #confirmation-popup-content {
         width: 100%;
         height: 100%;
         display: flex;
@@ -138,19 +143,19 @@
         color: white;
         gap: 32px;
 
-        button{
+        button {
             align-self: flex-end;
         }
 
-        button:hover{
+        button:hover {
             font-weight: 900;
         }
 
-        #bike{
+        #bike {
             font-size: 64px;
         }
 
-        div{
+        div {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -160,11 +165,31 @@
     }
 }
 
-@keyframes disappearOrderConfirmation{
-  from {visibility:visible;}
-  to {visibility: hidden;}
+@keyframes disappearOrderConfirmation {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
 }
 
 #order-confirmation-popup[open]::backdrop {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+#mobile-cart-wrapper {
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: blue;
+
+    #mobile-cart{
+        height: 100%;
+        width: 100%;
+    }
 }

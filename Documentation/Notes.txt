@@ -14,7 +14,7 @@ Bestellapp:
 
 
 FIGMA:
-- The menu bar remains permanently visible, giving the user constant access to the basket. Be sure to review this frame in prototype mode.
+// The menu bar remains permanently visible, giving the user constant access to the basket. Be sure to review this frame in prototype mode.
 - After the user clicks “Buy now,” a confirmation message appears indicating the order was successful, and the basket disappears. The message automatically fades out after a delay, and the user can also close it manually using the close icon.
 // Header & Footer are the full width of the frame.  In this case  - 1920px.
 // The rest of the content stays centered with the frame size  - 1440px
@@ -30,28 +30,28 @@ Verwende .gitignore, um unnötige Dateien auszuschließen
 Halte dein Repository aktuell und gepflegt
 
 *** Design & Layout
-Nutze die Figma-Vorlage.
-Die Struktur des Wireframes ist eingehalten.
-Pixelgenaue Umsetzung ist nicht erforderlich. Abweichungen vom Design sind erlaubt, solange das Wireframe eingehalten wird.
+// Nutze die Figma-Vorlage.
+// Die Struktur des Wireframes ist eingehalten.
+// Pixelgenaue Umsetzung ist nicht erforderlich. Abweichungen vom Design sind erlaubt, solange das Wireframe eingehalten wird.
 
 ***Funktionalitäten
 // Es gibt einen Warenkorb/ Bild + Logo & Name von einem Restaurant / sowie eine Gerichteliste (grundsätzlich schickes design, angelehnt an Lieferando) 
 // Es gibt einen Header und einen Footer
-Es wird ein großes Bild z.B. vom Essen des Restaurants ganz oben angezeigt. Das Logo liegt halb über diesem Bild. (s. z.B. Lieferando)
+// Es wird ein großes Bild z.B. vom Essen des Restaurants ganz oben angezeigt. Das Logo liegt halb über diesem Bild. (s. z.B. Lieferando)
 // Restaurant Name, Bewertung, Beschreibung und Informationen zum Lieferpreis etc. sowie Sterne werden statisch angezeigt.
 // Die auszuwählenden Gerichte (mindestens 5 Stück) werden dynamisch über JS aus einem Objekt gerendert.
-(optional) Es gibt einen Gerichteslider, der zu den jeweiligen Sektionen verlinkt, es sollte mindestens 3 verschiedene Kategorien geben mit jeweils mindestens 3 Gerichten, diese sollten von Bildern zur jeweiligen Kategorie getrennt sein. 
+Optional - Es gibt einen Gerichteslider, der zu den jeweiligen Sektionen verlinkt, es sollte mindestens 3 verschiedene Kategorien geben mit jeweils mindestens 3 Gerichten, diese sollten von Bildern zur jeweiligen Kategorie getrennt sein. 
 // Man soll Gerichte in den Warenkorb hinzufügen können, indem man auf das Plus beim jeweiligen Gericht drückt.
 // Im Warenkorb kann man nun für jedes einzelne enthaltene Gericht die Mengen erhöhen oder verringern sowie einzelne Gerichte komplett aus dem Warenkorb löschen.
 // Im Warenkorb wird die Gesamtsumme angezeigt
-// (optional) ggf. mit Zwischensumme zwecks Lieferkosten etc. 
-Man kann auf den bestellen Button drücken, danach sollte der Warenkorb geleert werden und eine Meldung kommen, dass man eine Testbestellung vorgenommen hat (kein Alert!).
+// Optional - ggf. mit Zwischensumme zwecks Lieferkosten etc. 
+// Man kann auf den bestellen Button drücken, danach sollte der Warenkorb geleert werden und eine Meldung kommen, dass man eine Testbestellung vorgenommen hat (kein Alert!).
 // Wenn viele Gerichte im Warenkorb sind, sollte nichts aus dem Container herauslaufen.
-Der Desktop-Warenkorb sollte immer oben an der Seite angeheftet sein, außer man ist ganz oben oder unten auf der Seite. (sticky)
+// Der Desktop-Warenkorb sollte immer oben an der Seite angeheftet sein, außer man ist ganz oben oder unten auf der Seite. (sticky)
 
 *** Code
-Aussagekräftige Namen für Funktionen und Variablen
-camelCase für die Benennung 
+// Aussagekräftige Namen für Funktionen und Variablen
+// camelCase für die Benennung 
 Code ist formatiert
 Höchstens 14 Zeilen pro Funktion
 Gleicher Abstand zwischen Funktionen (entweder 1 oder 2 Leerzeilen)

@@ -43,6 +43,20 @@ html {
         font-size: 1.25rem;
         font-weight: 600;
     }
+
+    @media screen and (max-width: 640px) {
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        h3, h4 {
+            font-size: 16px;
+        }
+    }
 }
 
 html:has(dialog[open]) {
@@ -114,6 +128,10 @@ main {
             gap: 24px;
             align-items: flex-end;
             font-size: 20px;
+
+            @media screen and (max-width: 640px) {
+                font-size: 16px;
+            }
 
             #ratings {
                 padding-bottom: 4px;

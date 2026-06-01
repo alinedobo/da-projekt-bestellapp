@@ -1,4 +1,5 @@
-header, footer {
+header,
+footer {
     height: 8dvh;
     max-height: 80px;
     width: 100%;
@@ -8,6 +9,17 @@ header, footer {
 
     img {
         height: 30px;
+    }
+
+    @media screen and (max-width: 890px) {
+        height: 100px;
+    }
+}
+
+footer {
+    @media screen and (max-width: 890px) {
+        position: fixed;
+        bottom: 0;
     }
 }
 
@@ -20,11 +32,61 @@ header, footer {
     padding: 8px 16px;
 }
 
-#header-content{
+#header-content-desktop {
+    width: 100%;
     justify-content: space-between;
+
+    @media screen and (max-width: 890px) {
+        display: none;
+    }
 }
 
-#footer-links{
+#header-content-mobile {
+    width: 100%;
+    justify-content: flex-start;
+
+    @media screen and (min-width: 890px) {
+        display: none;
+    }
+}
+
+#footer-content-desktop {
+    width: 100%;
     justify-content: space-evenly;
     color: white;
+
+    @media screen and (max-width: 890px) {
+        display: none;
+    }
+}
+
+#footer-content-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: flex-end;
+
+    #shopping-cart {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        #number-of-meals-in-cart {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: 891px) {
+        display: none;
+    }
 }

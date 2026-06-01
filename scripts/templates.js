@@ -2,8 +2,8 @@ function getCart(){
     return /*html*/`
         <h3>Your Basket</h3>
         <div id="meals-container"></div>
-        <div id="check-out-container">
-        </div>
+        <div id="check-out-container"></div>
+        <div><p>TEST</p></div>
         `
 }
 
