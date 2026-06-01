@@ -114,14 +114,25 @@ const orderConfirmationDialogRef = document.getElementById("order-confirmation-p
 
 function confirmOrder(sumTotal){
     if (sumTotal === 0){
-        /* do nothing */
+        orderConfirmationDialogRef.showModal();
+    
+        orderConfirmationDialogRef.innerHTML = /*html*/`
+            <div id="confirmation-popup-content">
+                <button onclick="closeOrderConfirmationDialog()">X</button>
+                <p>Your is cart is empty. </p>
+            </div>
+        `
         console.log("cart is empty");
     } else{
         orderConfirmationDialogRef.showModal();
     
         orderConfirmationDialogRef.innerHTML = /*html*/`
-            <div>
-                <button onclick="closeOrderConfirmationDialog()">close me</button>
+            <div id="confirmation-popup-content">
+                <button onclick="closeOrderConfirmationDialog()">X</button>
+                <div>
+                    <h4>Order confrmed!</h4>
+                    <p>Your food is on the way.</p>
+                </div>
             </div>
         `
     
@@ -131,9 +142,11 @@ function confirmOrder(sumTotal){
     }
 }
 
+
 function closeOrderConfirmationDialog(){
     orderConfirmationDialogRef.close();
 }
+
 
 function emptyCart(){
     for (let i = 0; i < myDishes.length; i++){
