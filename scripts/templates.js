@@ -32,6 +32,7 @@ function getEmptyCart(){
     `
 }
 
+
 function getDishesInCart(dishIndex, myDishes){
     return /*html*/`
         <div class="dish-in-cart-card" id="${myDishes[dishIndex].id}-in-cart">
@@ -72,4 +73,27 @@ function getCheckout(sumAllDishes, sumTotal, deliverFee){
         </table>
         <button onclick="confirmOrder(${sumTotal})">Order now (${sumTotal.toLocaleString("de-DE", { style: "currency", currency: "EUR" })})</button>
     `
+}
+
+
+function getCartEmptyMessage(){
+    return /*html*/`
+        <div id="confirmation-popup-content">
+            <button onclick="closeOrderConfirmationDialog()">X</button>
+            <p>Your is cart is empty. </p>
+        </div>
+    `
+}
+
+
+function getOrderComfirmedMessage(){
+    return /*html*/`
+        <div id="confirmation-popup-content">
+            <button onclick="closeOrderConfirmationDialog()">X</button>
+            <div>
+                <h4>Order confrmed!</h4>
+                <p>Your food is on the way.</p>
+            </div>
+        </div>
+        `
 }

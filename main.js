@@ -6,7 +6,6 @@ const menuItemRef = document.getElementById("menu-items-wrapper");
 function init() {
     renderDishes();
     renderCart();
-    console.log("init complete");
 }
 
 
@@ -16,15 +15,11 @@ function renderDishes(dishes) {
     for (let dishIndex = 0; dishIndex < myDishes.length; dishIndex++) {
         menuItemRef.innerHTML += getMenuItem(dishIndex, myDishes);
     }
-
-    console.log("all dishes rendered in menu");
 }
 
 
 function renderCart(){
     cartRef.innerHTML = getCart();
-    console.log("cart rendered");
-
     renderAddedDishes();
     renderCheckout();
 }
@@ -48,7 +43,6 @@ function renderAddedDishes(){
             }
         }
     }
-    console.log("all dishes added to cart");
 }
 
 
@@ -111,31 +105,13 @@ function renderCheckout(){
 
 
 const orderConfirmationDialogRef = document.getElementById("order-confirmation-popup")
-
 function confirmOrder(sumTotal){
     if (sumTotal === 0){
         orderConfirmationDialogRef.showModal();
-    
-        orderConfirmationDialogRef.innerHTML = /*html*/`
-            <div id="confirmation-popup-content">
-                <button onclick="closeOrderConfirmationDialog()">X</button>
-                <p>Your is cart is empty. </p>
-            </div>
-        `
-        console.log("cart is empty");
+        orderConfirmationDialogRef.innerHTML = getCartEmptyMessage();
     } else{
         orderConfirmationDialogRef.showModal();
-    
-        orderConfirmationDialogRef.innerHTML = /*html*/`
-            <div id="confirmation-popup-content">
-                <button onclick="closeOrderConfirmationDialog()">X</button>
-                <div>
-                    <h4>Order confrmed!</h4>
-                    <p>Your food is on the way.</p>
-                </div>
-            </div>
-        `
-    
+        orderConfirmationDialogRef.innerHTML = getOrderComfirmedMessage();
         emptyCart();
         renderCart();
         renderCheckout();
@@ -153,6 +129,4 @@ function emptyCart(){
         myDishes[i].inCart = 0;
         console.log(myDishes[i].inCart);
     }
-
-    console.log("cart emptied");
 }
