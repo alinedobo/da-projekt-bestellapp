@@ -112,16 +112,34 @@ function renderCheckout(){
 
 const orderConfirmationDialogRef = document.getElementById("order-confirmation-popup")
 
-function confirmOrder(){
-    orderConfirmationDialogRef.showModal();
-
-    orderConfirmationDialogRef.innerHTML = /*html*/`
-        <div>
-            <button onclick="closeOrderConfirmationDialog()">close me</button>
-        </div>
-    `
+function confirmOrder(sumTotal){
+    if (sumTotal === 0){
+        /* do nothing */
+        console.log("cart is empty");
+    } else{
+        orderConfirmationDialogRef.showModal();
+    
+        orderConfirmationDialogRef.innerHTML = /*html*/`
+            <div>
+                <button onclick="closeOrderConfirmationDialog()">close me</button>
+            </div>
+        `
+    
+        emptyCart();
+        renderCart();
+        renderCheckout();
+    }
 }
 
 function closeOrderConfirmationDialog(){
     orderConfirmationDialogRef.close();
+}
+
+function emptyCart(){
+    for (let i = 0; i < myDishes.length; i++){
+        myDishes[i].inCart = 0;
+        console.log(myDishes[i].inCart);
+    }
+
+    console.log("cart emptied");
 }

@@ -70,6 +70,6 @@ function getCheckout(sumAllDishes, sumTotal, deliverFee){
                 <th class="right-align">${sumTotal.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</th>
             </tr>
         </table>
-        <button onclick="confirmOrder()">Order now (${sumTotal.toLocaleString("de-DE", { style: "currency", currency: "EUR" })})</button>
+        <button onclick="confirmOrder(${sumTotal})">Order now (${sumTotal.toLocaleString("de-DE", { style: "currency", currency: "EUR" })})</button>
     `
 }

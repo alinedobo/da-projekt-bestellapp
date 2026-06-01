@@ -43,6 +43,11 @@ html {
         font-size: 1.25rem;
         font-weight: 600;
     }
+
+}
+
+html:has(dialog[open]) { /* remove the main scrollbar when dialog is open */
+overflow: hidden;
 }
 
 section {

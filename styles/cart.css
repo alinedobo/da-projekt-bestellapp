@@ -121,4 +121,12 @@
     margin: auto;
     background: plum;
     z-index: 1;
+    position: fixed;
+    animation-name: disappearOrderConfirmation;
+    animation-duration: 2s;
+}
+
+@keyframes disappearOrderConfirmation{
+  from {visibility:visible;}
+  to {visibility: hidden;}
 }
