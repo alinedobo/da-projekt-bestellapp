@@ -1,10 +1,17 @@
+.display-flex {
+    display: flex;
+}
+
+.display-none {
+    display: none;
+}
+
 #menu {
     background-color: white;
     width: calc(100% - 350px);
     max-width: 1090px;
     height: 100%;
     padding: 16px;
-    display: flex;
     flex-direction: column;
     gap: 16px;
 
@@ -22,9 +29,9 @@
         gap: 8px;
         z-index: 1;
 
-        @media screen and (max-width: 890px) {
+        /* @media screen and (max-width: 890px) {
             z-index: 0;
-        }
+        } */
 
         .menu-item {
             background-color: blanchedalmond;

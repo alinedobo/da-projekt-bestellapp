@@ -1,9 +1,9 @@
 function getCart(){
     return /*html*/`
         <button id="close-cart-button" onclick="toggleCart()">X</button>
-        <h3 class="display-none">Your Basket</h3>
-        <div id="meals-container" class="display-none"></div>
-        <div id="check-out-container" class="display-none"></div>
+        <h3>Your Basket</h3>
+        <div id="meals-container"></div>
+        <div id="check-out-container"></div>
         `
 }
 

@@ -16,6 +16,7 @@ footer {
     @media screen and (max-width: 890px) {
         position: fixed;
         bottom: 0;
+        z-index: 2;
     }
 }
 

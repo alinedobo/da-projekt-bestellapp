@@ -108,7 +108,11 @@ function renderCheckout(){
 
 function toggleCart(){
     const closeCartButtonRef = document.getElementById("close-cart-button");
-    closeCartButtonRef.classList.toggle("display-none");
+    const cartWrapperRef = document.getElementById("cart-wrapper")
+    cartWrapperRef.classList.toggle("display-none");
+
+    const menuRef = document.getElementById("menu");
+    menuRef.classList.toggle("display-none");
 }
 //#endregion
 
