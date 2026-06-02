@@ -16,11 +16,6 @@ aside {
         display: flex;
         justify-content: flex-end;
 
-        .content {
-            display: flex;
-            justify-content: flex-end;
-        }
-
         @media screen and (max-width: 890px) {
             justify-content: center;
             z-index: 1000;
@@ -50,6 +45,9 @@ aside {
                 height: 70dvh;
                 position: fixed;
                 top: 15dvh;
+                .display-none {
+                    display: none;
+                }
             }
 
             #meals-container {
@@ -195,5 +193,11 @@ aside {
 
     #order-confirmation-popup[open]::backdrop {
         background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #testytest {
+        height: 200px;
+        width: 200px;
+        background: purple;
     }
 }

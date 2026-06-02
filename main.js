@@ -22,6 +22,7 @@ function renderCart(){
     cartRef.innerHTML = getCart();
     renderAddedDishes();
     renderCheckout();
+    calculateTotalItemsInCart();
 }
 
 
@@ -80,6 +81,7 @@ function decreaseDishAmount(dishIndex){
 function removeDishFromCart(dishIndex){
     myDishes[dishIndex].inCart = 0;
     renderCart();
+    calculateTotalItemsInCart();
 }
 
 
@@ -130,4 +132,17 @@ function emptyCart(){
     }
 }
 
+function calculateTotalItemsInCart(){
+    let totalNumberItemsInCart = 0;
 
+    const numberItemsCartRef = document.getElementById("number-of-meals-in-cart");
+    numberItemsCartRef.innerHTML = "";
+
+    for (i = 0; i < myDishes.length; i++){
+        totalNumberItemsInCart += myDishes[i].inCart;
+    }
+
+    numberItemsCartRef.innerHTML = /*html*/`
+        <p id="number-of-meals-in-cart">${totalNumberItemsInCart}</p>
+    `
+}

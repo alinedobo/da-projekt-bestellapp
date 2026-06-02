@@ -75,11 +75,10 @@ main {
     /* background: orange; */
 }
 
-.content{
+.content {
     width: 100%;
     max-width: 1440px;
     height: 100%;
-    /* background: black; */
 }
 
 #content-wrapper {
