@@ -1,8 +1,9 @@
 function getCart(){
     return /*html*/`
-        <h3>Your Basket</h3>
-        <div id="meals-container"></div>
-        <div id="check-out-container"></div>
+        <button id="close-cart-button" onclick="toggleCart()">X</button>
+        <h3 class="display-none">Your Basket</h3>
+        <div id="meals-container" class="display-none"></div>
+        <div id="check-out-container" class="display-none"></div>
         `
 }
 
@@ -34,7 +35,7 @@ function getEmptyCart(){
 
 function getDishesInCart(dishIndex, myDishes){
     return /*html*/`
-        <div class="dish-in-cart-card" id="${myDishes[dishIndex].id}-in-cart">
+        <div class="dish-in-cart-card display-none" id="${myDishes[dishIndex].id}-in-cart">
             <div class="meal-in-cart-card-first-row">
                 <p>${myDishes[dishIndex].name}</p>
                 <button onclick="removeDishFromCart(${dishIndex})">&#128465;</button>

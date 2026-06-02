@@ -10,16 +10,18 @@ aside {
 
     #cart-wrapper {
         position: absolute;
-        top: 40dvh;
+        top: 45dvh;
         width: 100%;
-        height: calc(100% - 40dvh);
+        height: calc(100% - 45dvh);
         display: flex;
         justify-content: flex-end;
+        background-color: blue;
 
         @media screen and (max-width: 890px) {
+            width: 100%;
             justify-content: center;
             z-index: 1000;
-            background-color: black;
+            background-color: pink;
             .display-none {
                 display: none;
             }
@@ -45,108 +47,117 @@ aside {
                 height: 70dvh;
                 position: fixed;
                 top: 15dvh;
+                z-index: 0;
                 .display-none {
                     display: none;
                 }
             }
 
-            #meals-container {
-                height: 300px;
-                overflow-y: scroll;
+            button {
+                align-self: flex-end;
+                padding-right: 16px;
+
+                @media screen and (min-width: 891px) {
+                    display: none;
+                }
+            }
+        }
+
+        #meals-container {
+            height: 300px;
+            overflow-y: scroll;
+            width: 100%;
+            background: white;
+            color: black;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 4px;
+            border-radius: 8px;
+
+            .dish-in-cart-card {
+                min-height: 75px;
                 width: 100%;
-                background: white;
+                background-color: blanchedalmond;
                 color: black;
                 padding: 8px;
                 display: flex;
                 flex-direction: column;
-                gap: 4px;
-                padding: 4px;
-                border-radius: 8px;
+                justify-content: space-between;
+                align-items: flex-start;
+                border-radius: 4px;
 
-                .dish-in-cart-card {
-                    min-height: 75px;
+                .meal-in-cart-card-first-row {
+                    height: 25px;
                     width: 100%;
-                    background-color: blanchedalmond;
-                    color: black;
-                    padding: 8px;
                     display: flex;
-                    flex-direction: column;
                     justify-content: space-between;
-                    align-items: flex-start;
-                    border-radius: 4px;
+                    align-items: center;
 
-                    .meal-in-cart-card-first-row {
-                        height: 25px;
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        p {
-                            font-weight: 600;
-                        }
-                    }
-
-                    .meal-in-cart-card-second-row {
-                        height: 25px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 100%;
-
-                        .change-meal-amount {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            gap: 8px;
-
-                            button:hover {
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
-            }
-
-            #check-out-container {
-                height: fit-content;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 24px;
-                padding: 8px;
-
-                table {
-                    width: 80%;
-                    border-collapse: collapse;
-
-                    th,
-                    td {
-                        padding: 4px;
-                    }
-
-                    .left-align {
-                        text-align: left;
-                    }
-                    .right-align {
-                        text-align: right;
-                    }
-                    th {
-                        border-top: 2px solid black;
+                    p {
+                        font-weight: 600;
                     }
                 }
 
-                button {
-                    border: 2px solid white;
-                    padding: 4px 16px;
-                    border-radius: 16px;
-                    font-weight: 800;
+                .meal-in-cart-card-second-row {
+                    height: 25px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .change-meal-amount {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 8px;
+
+                        button:hover {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
-    }
 
+        #check-out-container {
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            padding: 8px;
+
+            table {
+                width: 80%;
+                border-collapse: collapse;
+
+                th,
+                td {
+                    padding: 4px;
+                }
+
+                .left-align {
+                    text-align: left;
+                }
+                .right-align {
+                    text-align: right;
+                }
+                th {
+                    border-top: 2px solid black;
+                }
+            }
+
+            button {
+                border: 2px solid white;
+                padding: 4px 16px;
+                border-radius: 16px;
+                font-weight: 800;
+            }
+        }
+    }
     #order-confirmation-popup {
         height: 150px;
         width: 200px;
@@ -194,10 +205,17 @@ aside {
     #order-confirmation-popup[open]::backdrop {
         background-color: rgba(255, 255, 255, 0.5);
     }
+}
 
-    #testytest {
-        height: 200px;
-        width: 200px;
-        background: purple;
+#testytest {
+    height: 200px;
+    width: 200px;
+    background: purple;
+
+    @media screen and (max-width: 890px) {
+        background-color: green;
+        .display-none {
+            display: none;
+        }
     }
 }

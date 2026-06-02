@@ -25,7 +25,7 @@ function renderCart(){
     calculateTotalItemsInCart();
 }
 
-
+//#region Cart
 function renderAddedDishes(){
     const mealsContainerRef = document.getElementById("meals-container");
     mealsContainerRef.innerHTML = "";
@@ -106,6 +106,13 @@ function renderCheckout(){
 }
 
 
+function toggleCart(){
+    const closeCartButtonRef = document.getElementById("close-cart-button");
+    closeCartButtonRef.classList.toggle("display-none");
+}
+//#endregion
+
+//#region Order confirmation dialog
 const orderConfirmationDialogRef = document.getElementById("order-confirmation-popup")
 function confirmOrder(sumTotal){
     if (sumTotal === 0){
@@ -131,6 +138,7 @@ function emptyCart(){
         myDishes[i].inCart = 0;
     }
 }
+//#endregion
 
 function calculateTotalItemsInCart(){
     let totalNumberItemsInCart = 0;
