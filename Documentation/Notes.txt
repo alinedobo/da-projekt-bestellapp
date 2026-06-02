@@ -23,11 +23,12 @@ Optional - After the user clicks “Buy now,” a confirmation message appears i
 
 CHECKLIST:
 *** Git-Workflow für dein Projekt
-Nutze GitHub von Anfang an. Denk dran: Dein GitHub-Profil ist deine Visitenkarte für Arbeitgeber – nutze diese Chance!
+// Nutze GitHub von Anfang an. 
+Dein GitHub-Profil ist deine Visitenkarte für Arbeitgeber – nutze diese Chance!
 // Committe nach jeder Coding-Session
 // Verwende klare, aussagekräftige Commit-Messages
-Verwende .gitignore, um unnötige Dateien auszuschließen
-Halte dein Repository aktuell und gepflegt
+// Verwende .gitignore, um unnötige Dateien auszuschließen
+// Halte dein Repository aktuell und gepflegt
 
 *** Design & Layout
 // Nutze die Figma-Vorlage.
@@ -52,10 +53,10 @@ Optional - Es gibt einen Gerichteslider, der zu den jeweiligen Sektionen verlink
 *** Code
 // Aussagekräftige Namen für Funktionen und Variablen
 // camelCase für die Benennung 
-Code ist formatiert
-Höchstens 14 Zeilen pro Funktion
-Gleicher Abstand zwischen Funktionen (entweder 1 oder 2 Leerzeilen)
-Lagere HTML Templates aus in extra-Funktionen
+// Code ist formatiert
+// Höchstens 14 Zeilen pro Funktion
+// Gleicher Abstand zwischen Funktionen (entweder 1 oder 2 Leerzeilen)
+// Lagere HTML Templates aus in extra-Funktionen
 
 *** Responsive
 Bis 320px Breite alles responsive ohne horizontalen Scrollbalken

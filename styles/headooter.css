@@ -1,5 +1,4 @@
-header,
-footer {
+header, footer {
     height: 8dvh;
     max-height: 80px;
     width: 100%;
@@ -10,10 +9,6 @@ footer {
 
     img {
         height: 30px;
-    }
-
-    @media screen and (max-width: 890px) {
-        height: 100px;
     }
 }
 

@@ -10,9 +10,9 @@ aside {
 
     #cart-wrapper {
         position: absolute;
-        top: 275px;
+        top: 40dvh;
         width: 100%;
-        height: calc(100% - 275px);
+        height: calc(100% - 40dvh);
         display: flex;
         justify-content: flex-end;
 
