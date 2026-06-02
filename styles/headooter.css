@@ -6,6 +6,7 @@ footer {
     display: flex;
     justify-content: center;
     background: var(--dark-green);
+    /* z-index: 2; */
 
     img {
         height: 30px;

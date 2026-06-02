@@ -131,33 +131,3 @@ function emptyCart(){
 }
 
 
-//#region  does not work
-
-const mobileCartDialogRef = document.getElementById("mobile-cart-wrapper");
-function openMobileCart(){
-    mobileCartDialogRef.showModal();
-    console.log("modal opened");
-
-    renderMobileCart()
-}
-
-
-const mobileCartRef = document.getElementById("mobile-cart");
-function renderMobileCart(){
-    mobileCartRef.innerHTML = getCart();
-        console.log("getCart mobile completed");
-
-    renderAddedDishes();
-        console.log("mobile dishes rendered");
-
-    renderCheckout();
-        console.log("mobile checkout rendered");
-
-        console.log("mobile cart shown");
-}
-//#endregion does not work
-
-
-function closeMobileCart(){
-    mobileCartDialogRef.close();
-}
